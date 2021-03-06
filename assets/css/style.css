@@ -102,18 +102,18 @@ body {
     padding-bottom: 1em;
 }
 
-.meme-wrapper{
+/* .meme-wrapper{
   background-color: #706969;
-  /* margin-left: 6em;
-  margin-right: 3em; */
-}
+  margin-left: 6em;
+  margin-right: 3em;
+} */
 
 .memes-container div{
    
     /* background-color: #d9534f; */
     cursor: pointer;
     padding: 5px 5px 5px 5px;
-    border: black solid 4px;
+    /* border: black solid 4px; */
     /* margin-top: 1em;
     margin-right: 3em;
     margin-left: 3em; */
