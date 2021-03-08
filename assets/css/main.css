@@ -1453,17 +1453,7 @@ ul.menu li:first-child {
     color: #7a7a7a
 }
 
-.bio-graph-heading {
-    background: #fbc02d;
-    color: #fff;
-    text-align: center;
-    font-style: italic;
-    padding: 40px 110px;
-    border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
-    font-size: 16px;
-    font-weight: 300
-}
+
 
 .bio-graph-info {
     color: #89817e;
@@ -1949,3 +1939,10 @@ ul.menu li:first-child {
     display: block;
   }
   
+
+  .topMemes{
+      /* background-color: #00415d; */
+      
+      margin-bottom: 1em;
+      position: relative;
+  }
