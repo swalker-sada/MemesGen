@@ -247,7 +247,8 @@ canvas {
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 0.9em;
+    font-size: 1em;
+  
 }
 
     #nav ul {
@@ -483,12 +484,15 @@ canvas {
         /* Logo */
         #logo {
             display: inline-block;
+            margin-left: -9em;
+            
             
         }
     
         #logo img {
-            max-width: 40%;
+            max-width: 45%;
             max-height: 40%;
+            
         }
         /* ////////////////////////////////////////////// */
         /* profile styling */

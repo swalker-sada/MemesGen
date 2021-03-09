@@ -62,7 +62,7 @@ function processMeme(memeInfo) {
         loadFont(text.fontFamily)
     })
 
-    // Event: Add new image
+    // Event: Add new image from computer
     $('#add-image').off('input').on('input', function () {
         const file = this.files[0];
         const fileType = file['type'];
@@ -123,4 +123,7 @@ function processMeme(memeInfo) {
         link.click();
         document.body.removeChild(link);
     })
+
+
+  
 }
