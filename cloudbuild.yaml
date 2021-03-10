@@ -9,7 +9,7 @@ steps:
   id: "Prepare Manifests"
   args:
   - prepare
-  - --filename=anthos-anywhere-demo-gcp.yaml
+  - --filename=deployment.yaml
   - --image=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: /bin/sh
