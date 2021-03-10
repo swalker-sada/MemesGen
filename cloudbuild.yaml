@@ -10,7 +10,7 @@ steps:
   args:
   - prepare
   - --filename=anthos-anywhere-demo-gcp.yaml
-  - --image=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image::latest
+  - --image=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: /bin/sh
   id: "Deploy to GKE on GCP"
