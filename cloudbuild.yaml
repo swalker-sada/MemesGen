@@ -4,7 +4,7 @@ steps:
   args: ['build', '--tag=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
   id: "Push to GCR"
-  args: ['push', 'gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image::latest']
+  args: ['push', 'gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest']
 - name: "gcr.io/cloud-builders/gke-deploy"
   id: "Prepare Manifests"
   args:
