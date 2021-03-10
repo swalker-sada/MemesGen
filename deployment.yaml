@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memegen-v2
+spec:
+  selector:
+    matchLabels:
+      app: memegen-v2
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: memegen-v2
+        env: gcp
+    spec:
+      containers:
+      - name: memegen-v2
+        image: gcr.io/sada-gke-on-prem-demo/memegen-v2/memegen-v2-image:latest
+        ports:
+        - containerPort: 80
