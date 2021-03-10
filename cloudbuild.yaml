@@ -1,0 +1,23 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: "Build Container"
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  id: "Push to GCR"
+  args: ['push', 'gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest']
+- name: "gcr.io/cloud-builders/gke-deploy"
+  id: "Prepare Manifests"
+  args:
+  - prepare
+  - --filename=deployment.yaml
+  - --image=gcr.io/$PROJECT_ID/memegen-v2/memegen-v2-image:latest
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: /bin/sh
+  id: "Deploy to GKE on GCP"
+  args:
+  - '-c'
+  - |
+    set -x && \
+    export KUBECONFIG="$(pwd)/gateway-kubeconfig" && \
+    gcloud alpha container hub memberships get-credentials anthos-gcp-cluster && \
+    kubectl --kubeconfig=gateway-kubeconfig apply -f output/expanded

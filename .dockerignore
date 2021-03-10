@@ -1,0 +1,6 @@
+.gitignore
+.git
+.cache
+*.md
+deployment.yaml
+cloudbuild.yaml
